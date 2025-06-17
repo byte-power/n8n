@@ -187,6 +187,7 @@ export class LicenseState {
 	}
 
 	getMaxTeamProjects() {
+		return 100;
 		return this.getValue('quota:maxTeamProjects') ?? 0;
 	}
 
