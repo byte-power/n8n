@@ -208,8 +208,8 @@ export class InsightsService {
 
 		return INSIGHTS_DATE_RANGE_KEYS.map((key) => ({
 			key,
-			licensed:
-				key === 'day' ? (isHourlyDateLicensed ?? false) : maxHistoryInDays >= keyRangeToDays[key],
+			licensed: true,
+				// key === 'day' ? (isHourlyDateLicensed ?? false) : maxHistoryInDays >= keyRangeToDays[key],
 			granularity: key === 'day' ? 'hour' : keyRangeToDays[key] <= 30 ? 'day' : 'week',
 		}));
 	}

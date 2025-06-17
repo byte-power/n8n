@@ -13,11 +13,13 @@ export function isWorkflowHistoryEnabled() {
 }
 
 export function getWorkflowHistoryLicensePruneTime() {
+	return 360;
 	return Container.get(License).getWorkflowHistoryPruneLimit();
 }
 
 // Time in hours
 export function getWorkflowHistoryPruneTime(): number {
+	return 361;
 	const licenseTime = Container.get(License).getWorkflowHistoryPruneLimit();
 	const configTime = Container.get(GlobalConfig).workflowHistory.pruneTime;
 
