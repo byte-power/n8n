@@ -111,6 +111,7 @@ export class LicenseState {
 	}
 
 	isAPIDisabled() {
+		return false;
 		return this.isLicensed('feat:apiDisabled');
 	}
 

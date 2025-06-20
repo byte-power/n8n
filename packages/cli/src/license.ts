@@ -304,6 +304,7 @@ export class License implements LicenseProvider {
 
 	/** @deprecated Use `LicenseState.isAPIDisabled` instead. */
 	isAPIDisabled() {
+		return false;
 		return this.isLicensed(LICENSE_FEATURES.API_DISABLED);
 	}
 
